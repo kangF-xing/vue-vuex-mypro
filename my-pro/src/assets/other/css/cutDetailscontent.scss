@@ -1,0 +1,16 @@
+#cut-details-content{
+    #cut-details-content-ul{
+        display: flex;
+        li{
+            padding:rem(41) 0 rem(49.5) 0;
+            text-align: center;
+            width:50%;
+            font-size: rem(42);
+            border-bottom:2px solid #f1f1f1;
+        }
+        li:hover{
+            color:#a83636;
+            border-bottom:2px solid #a83636;
+        }
+    }
+}

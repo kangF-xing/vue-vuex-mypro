@@ -1,0 +1,22 @@
+#MineHeader{
+    padding:rem(135) 0 rem(140) rem(40);
+    background:#c9b89c;
+    img{
+        width:rem(220);
+        height:rem(220);
+        border-radius:50%;
+        float: left;
+        margin:0 rem(40) 0 0;
+    }
+    p{
+        font-size:rem(44);
+        margin:rem(33) 0 0 0;
+        color:#fff;
+    }
+    span{
+        font-size:rem(30);
+        color: #fff;
+        padding:15px 10px;
+        background: #b0a17a;
+    }
+}

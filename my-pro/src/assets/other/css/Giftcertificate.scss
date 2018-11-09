@@ -1,0 +1,47 @@
+#Giftcertificate{
+    position: relative;
+    h3{
+        position: absolute;
+        font-size: rem(55);
+        left:rem(55);
+        top:rem(86);
+    }
+    #bgimg{
+        width:100%;
+        img{
+            width:100%;
+            height:rem(478);
+        }
+    }
+    #input-box{
+        width:rem(996);
+        margin:0 auto;
+        border:1px solid #dbbe84;
+        padding:rem(55) 0 rem(64) 0;
+        input{
+            border:1px solid #dbbe84;
+            height:rem(104);
+            text-indent: rem(32);
+            outline: none;
+            border-radius:rem(10);
+            width:rem(674);
+            color:#dbbe84;
+        }
+        button{
+            padding:rem(27) rem(42) rem(32) rem(49);
+            background:#ea7774;
+            font-size:rem(40);
+            color: #fff;
+            border:none;
+            outline: none;
+            border-radius:rem(15);
+        }
+    }
+    #Giftimg{
+        img{
+            width:rem(996);
+            margin:0 auto;
+            padding:rem(30) 0 0 0;
+        }
+    }
+}

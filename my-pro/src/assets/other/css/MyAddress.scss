@@ -1,0 +1,18 @@
+#my-address{
+    #my-address-header{
+        span{
+            float: left;
+            margin:0 0 0 rem(56);
+            font-size:rem(55);
+        }
+        p{
+            font-size:rem(42);
+            margin:0 0 0 rem(456);
+            padding:rem(15) 0 rem(40) 0;
+        }
+    }
+    #my-address-content{
+        background:#f1f1f1;
+        height:rem(1584);
+    }
+}

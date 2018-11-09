@@ -1,0 +1,57 @@
+#storeUpHeader{
+    #integral{
+        background:#fef9e6;
+        padding:rem(162) 0 rem(136) 0;
+        text-align: center;
+        p{
+            font-size:rem(38);
+            margin-bottom:rem(80)
+        }
+        h3{
+            font-size:rem(74);
+            color: #c2b38c;
+        }
+    }
+    #AddValue{
+        background:#ede1d3;
+        padding:rem(30) 0 rem(40) 0;
+        .AddValue{
+            color:#999;
+            padding:0 rem(65) 0 rem(55);
+            display: flex;
+            justify-content: space-between;
+            li{
+                font-size:rem(28)
+            }
+        }
+        .dot{
+            width:100%;
+            position: relative;
+            margin:rem(17) 0;
+            display: flex;
+            li{
+                width:rem(240);
+                text-align: center;
+                border:2px solid #a59d92;
+            p{
+                width:rem(25);
+                height:rem(25);
+                border-radius:50%;
+                background: #a59d92;
+                position: absolute;
+                top:-7px;
+                margin:0 0 0 rem(60);
+                
+            }
+          }  
+        }
+        ol{
+            display:flex;
+            justify-content: space-between;
+            padding:0 rem(55) 0 rem(55);
+            li{
+                font-size:rem(35);
+            }
+        }
+    }
+}

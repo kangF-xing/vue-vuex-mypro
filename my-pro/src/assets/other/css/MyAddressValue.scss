@@ -1,0 +1,50 @@
+#MyAddress-value{
+    #MyAddress-value-header{
+        span{
+            float: left;
+            margin:0 0 0 rem(56);
+            font-size:rem(55);
+        }
+        p{
+            font-size:rem(42);
+            margin:0 0 0 rem(456);
+            padding:rem(15) 0 rem(40) 0;
+        }
+    }
+    #MyAddress-value-content{
+        ul{
+            li{
+                border-bottom:2px solid #f1f1f1;
+                margin:0 rem(40) 0 rem(34);
+                label{
+                    font-size:rem(34);
+                    width:rem(227);
+                    display: inline-block;
+                }
+                input{
+                    text-indent:0;
+                    border:none;
+                    background:none;
+                }
+                select{
+                    border:none;
+                    font-size:rem(34);
+                    outline:none;
+                }
+            }
+        }
+    }
+    #MyAddress-value-buttons{
+        background:#f1f1f1;
+        height:rem(1215);
+        padding:rem(43);
+        button{
+            width:100%;
+            margin-left:0;
+            height:rem(110);
+            font-size:rem(46);
+            margin-bottom:rem(43);
+            border-radius:0;
+        }
+    }
+}

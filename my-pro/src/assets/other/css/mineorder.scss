@@ -1,0 +1,39 @@
+#mineorder{
+    .mineorder{
+        padding-top:rem(25);
+        display: flex;
+        justify-content: space-between;
+        padding:rem(45) rem(23) rem(70) rem(44);
+        span{
+            color:#d9bd8d;
+            font-size:rem(60);
+            small{
+                font-size:rem(50);
+                color:#333;
+                margin-left:5px;
+            }
+        }
+        p{
+            color:#555;
+            line-height:45px;
+        }
+    }
+    .bgcolor{
+        height:rem(30);
+        background:#f7f7f7;
+    }
+    ul{
+        display: flex;
+        padding:0 0 rem(35) 0;
+        li{
+            width:25%;
+            text-align: center;
+            span{
+                font-size:rem(78)
+            }
+            p{
+                font-size:rem(32)
+            }
+        }
+    }
+}

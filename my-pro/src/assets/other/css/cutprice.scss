@@ -1,0 +1,59 @@
+#cut-Price{
+    #cut-header{
+        span{
+            float:left;
+            font-size:rem(55);
+        }
+        p{
+            font-size:rem(35);
+            margin:0 0 0 rem(456);
+            padding: rem(15) 0;
+        }
+    }
+    #cut-list{
+        padding:rem(70) 0 0 0;
+        li{
+            padding:0 0 rem(121.5) 0;
+            img{
+                float: left;
+                width:rem(328.5);
+                height:rem(328.5);
+                border-radius:rem(10);
+                margin:0 rem(44) 0 rem(28);
+            }
+            h3{
+                font-size:rem(38);
+                padding:rem(38.5) 0 rem(20) 0;
+
+            }
+            h4{
+                font-size:rem(32);
+                color:#aaaba6;
+            }
+            ul{
+                display: flex;
+                justify-content: space-between;
+                padding:0 rem(180) 0 0;
+                li{
+                    color:#aaaba6;
+                    text-align: center;
+                    span{
+                        font-size:rem(33)
+                    }
+                    p{
+                        font-size:rem(30)
+                    }
+                }
+                .floor-price{
+                    span{
+                        color:#aa2f4c;
+                        font-size: rem(35)
+                    }
+                    p{
+                        color: #222;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,41 @@
+#strict-selection{
+    #strict-header{
+        span{
+            float:left;
+            font-size:rem(57);
+        }
+        p{
+            font-size:rem(36);
+            padding:rem(25) 0;
+            margin:0 0 0 rem(456);
+        }
+    }
+    #strict-nav{
+        width:100%;
+        overflow: auto;
+        ul{
+            padding:rem(75) 0 rem(60) 0;
+            display: flex;
+            width:125%;
+            li{
+                width:rem(300);
+                padding:0 0 0 rem(30);
+                img{
+                    width:100%;
+                    border-radius:rem(10);
+                }
+            }
+        }
+    }
+    #strict-content{
+        width:100%;
+        div{
+            img{
+                width:rem(1036);
+                margin:0 auto;
+                padding:rem(30) 0 0 0;
+            }
+        }
+        
+    }
+}

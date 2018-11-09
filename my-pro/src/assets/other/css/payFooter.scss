@@ -1,0 +1,21 @@
+#pay-footer{
+    height:rem(144);
+    display: flex;
+    span{
+        display: inline-block;
+        width:rem(360);
+        font-size:rem(45);
+        color:#fff;
+        background:#b6272d;
+        padding:rem(50) 0 0 0;
+        text-align: center;
+        margin-left:rem(47);
+    }
+    p{
+        font-size:rem(35);
+        color: #b6272d;
+        line-height:rem(144);
+        margin-left:rem(470);
+    }
+
+}

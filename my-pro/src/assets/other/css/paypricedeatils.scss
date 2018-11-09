@@ -1,0 +1,45 @@
+#pay-price-deatils{
+    #pay-price-deatils-header{
+        border-bottom:1px solid #999;
+        padding:rem(10) 0 rem(37) 0;
+        span{
+            float:left;
+            font-size:rem(54);    
+            margin:0 0 0 rem(58);
+        }
+        p{
+            font-size:rem(38);
+            margin:rem(15) 0 rem(15) rem(456);
+        }
+    }
+    #pay-price-deatils-allprice{
+        display: flex;
+        padding:rem(60) 0 rem(50) rem(40);
+        p{
+            margin:rem(18.5) rem(42) 0 0;
+            font-size:rem(75);
+            color: #ff8f71;
+        }
+        .dizhi{
+            color: #74a5e7;
+        }
+        ul{
+            li{
+                font-size: rem(40);
+                margin-bottom:rem(35.5);
+                span{
+                    color:#b5272d;
+                }
+            }
+            .OrderID{
+                color: #999;
+                span{
+                    color: #999;
+                }
+            }
+        }
+    }
+    #bgcolor{
+        height:rem(12);
+    }
+}

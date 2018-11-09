@@ -1,0 +1,52 @@
+#Bargaining-content{
+    h2{
+        text-align: center;
+        margin:rem(39.99) 0 rem(49.96875) 0;
+        font-size:rem(45);
+        color:#333;
+        small{
+            text-align: center;
+            font-size:rem(42.1875);
+            display: inline-block;
+            border-radius:50%;
+            line-height:rem(43.734375);
+            width:rem(46.875);
+            color: #7f7f7f;
+            height:rem(46.875);
+            border:1px solid #7f7f7f;
+        }
+    }
+    ul{
+        li{
+            padding:rem(21) rem(30);
+            img{
+                width:rem(285);
+                height:rem(285);
+                border-radius:5px;
+                float: left;
+                margin-right:rem(30);
+            }
+            h3{
+                font-size:rem(34.996875);
+                margin-bottom:rem(15);
+            }
+            p{
+                font-size:rem(27.999);
+                margin-bottom:rem(35.15625);
+            }
+            ol{
+                display: flex;
+                justify-content: space-between;
+                li{
+                    padding:0;
+                    span{
+                        font-size:rem(30);
+                    }
+                    p{
+                        font-size:rem(35.15625);
+                    }
+                }
+            }
+        }
+    }
+}

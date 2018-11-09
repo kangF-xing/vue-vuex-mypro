@@ -1,0 +1,39 @@
+#groupFooter{
+    margin-bottom:0;
+    padding:0;
+    ul{
+        display: flex;
+        justify-content: space-between;
+        li{
+            border-top:1px solid #e2e2e2;
+            span{
+                color:#777;
+                font-size:rem(70);
+                text-align: center;
+                display: inline-block;
+                padding:rem(38) rem(36);
+                border-right:1px solid #e2e2e2;
+            }
+            small{
+                font-size:rem(34);
+                padding:0 rem(106);
+            }
+            p{
+                font-size:rem(40);
+                padding:0 rem(76) rem(15) rem(76);
+            }
+        }
+        #groupcolor{
+            background:#b6272d;
+            color:#fff;
+            small{
+                font-size:rem(34);
+                padding:0 rem(181);
+            }
+            p{
+                font-size:rem(40);
+                padding:0 rem(155) rem(15) rem(155);
+            }
+        }
+    }
+}

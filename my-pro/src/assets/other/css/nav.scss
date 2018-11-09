@@ -1,0 +1,22 @@
+@function rem($px) {
+    @return $px / 67.5 + rem;
+}
+#nav{
+    ul{
+        display: flex;
+        justify-content: space-between;
+        border-top-left-radius: 30px;
+        border-top-right-radius:50px;
+        li{
+            text-align: center;
+            width:25%;
+            padding:rem(27.9535) 0 rem(78.75) 0;
+            p{
+                font-size:rem(34.96875);
+            }
+            span{ 
+                font-size:rem(84.984375);  
+            }
+        }
+    }
+}

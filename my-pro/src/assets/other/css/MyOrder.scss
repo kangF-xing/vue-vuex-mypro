@@ -1,0 +1,33 @@
+#My-Order{
+    #My-Order-header{
+        span{
+            font-size:rem(55);
+            float: left;
+            margin:0 0 0 rem(56);
+        }
+        p{
+            font-size:rem(35);
+            padding:rem(18) 0;
+            color:#555;
+            margin:0 0 0 rem(456);
+        }
+    }
+    ul{
+        display:flex;
+        li{
+            width:20%;
+            text-align: center;
+            font-size:rem(36);
+            padding:rem(38) 0;
+            border-bottom:2px solid #fff;
+        }
+        li:hover{
+            border-bottom:2px solid #ad2635;
+            color: #ad2635;
+        }
+    }
+    #My-Order-conents{
+        background: #f1f1f1;
+        height:rem(1448);
+    }
+}

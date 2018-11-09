@@ -1,0 +1,12 @@
+#groupChildXQ{
+    .list-paddingleft-2{
+        display: flex;
+        flex-wrap: wrap; 
+    }
+    p{
+        .img-lazyload{
+            width:100%;
+        }
+    }
+   
+}

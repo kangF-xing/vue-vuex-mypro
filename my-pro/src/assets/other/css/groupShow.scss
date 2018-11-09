@@ -1,0 +1,111 @@
+#group-show{
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    z-index:1;
+    background:rgba(0,0,0,0.5);
+    #group-show-content{
+        position: fixed;
+        background:#fff;
+        width:100%;
+
+        bottom:0;
+        #group-show-details{
+            margin-left:rem(41);
+            position: relative;
+            border-bottom:1px solid #f1f1f1;
+            padding:rem(45) 0 rem(41) 0;
+            img{
+                width:rem(172);
+                height:rem(172);
+                float:left;
+                margin:0 rem(36) 0 0;
+            }
+            h3{
+                font-size:rem(35);
+                padding:rem(29) 0 rem(50) 0;
+            }
+            p{
+                font-size:rem(24);
+                color:#b6272b;
+            }
+            span{
+                position: absolute;
+                right:rem(42);
+                top:rem(27);
+                font-size:rem(24);
+                display: inline-block;
+                width:rem(52);
+                height:rem(52);
+                border:2px solid #9b9b9b;
+                border-radius:50%;
+                line-height:rem(46);
+                text-align: center;
+                color: #9b9b9b;
+            }
+        }
+        .group-show-select-1{
+            margin-left:rem(41);
+            padding:rem(52) 0 0 0;
+            h3{
+                font-size:rem(32);
+                padding:0 0 rem(36) 0;
+            }
+            ul{
+                display: flex;
+                flex-wrap:wrap;
+                .show-li-1{
+                    padding:rem(27) rem(40) rem(27) rem(37);
+                    margin:0 rem(27) rem(27) 0;
+                    font-size:rem(35);
+                    border:2px solid #dddddd;
+                }
+                .showLiQH{
+                    border:2px solid #b6272b;
+                    margin-right:rem(27);
+                    color:#b6272b;
+                    padding:rem(27) rem(40) rem(27) rem(37);
+                }
+                .showLiqH{
+                    border:2px solid #b6272b;
+                    margin-right:rem(27);
+                    color:#b6272b;
+                    padding:rem(27) rem(40) rem(27) rem(37);
+                }
+            }
+        }
+        #group-show-count{
+            margin-left:rem(41);
+            display: flex;
+            justify-content: space-between;
+            padding:rem(40) rem(38) rem(64) 0;
+            h2{
+                font-size:rem(34);
+                margin-top:rem(26);
+                color:#555;
+            }
+            ul{
+                display: flex;
+                li{
+                    padding:rem(28) rem(46);
+                    font-size:rem(32);
+                    border:2px solid #f1f1f1;
+                }
+            }
+        }
+        .buy{
+            width:100%;
+            background:#b6272b;
+            text-align: center;
+            height:rem(122.5);
+            a{
+                font-size:rem(44);
+                color:#fff;
+                line-height: rem(122.5);
+            }
+        }
+        
+    }
+}
+

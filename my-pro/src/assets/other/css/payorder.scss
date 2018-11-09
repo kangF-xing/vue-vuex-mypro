@@ -1,0 +1,48 @@
+#pay-order{
+    #pay-order-header{
+        padding:rem(10) 0;
+        span{
+            float:left;
+            font-size:rem(54);    
+            margin:0 0 0 rem(58);
+        }
+        p{
+            font-size:rem(38);
+            margin:rem(15) 0 rem(15) rem(456);
+        }
+    }
+    #pay-address{
+        margin-top:rem(76);
+        position: relative;
+        padding:0 0 rem(52) rem(45);
+        h3{
+            font-size:rem(38);
+            float: left;
+            height:rem(122);
+            color: #8b8b8b;
+            margin-right:rem(70);
+        }
+        div{
+            p{
+                font-size:rem(35);
+                margin-bottom:rem(32);
+            }
+            h4{
+                font-size:rem(34);
+                color:#8b8b8b;
+            }
+        }
+        h5{
+            position: absolute;
+            right:rem(46);
+            top:rem(42);
+            font-size:rem(32);
+            color: #8b8b8b;
+            float: right;
+        }
+    }
+    img{
+        width:100%;
+        display: inline-block;
+    }
+}

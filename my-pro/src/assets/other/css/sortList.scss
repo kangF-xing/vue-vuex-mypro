@@ -1,0 +1,41 @@
+#sortList{
+    #sortheader{
+        padding:rem(10) 0;
+        span{
+            float:left;
+            font-size:rem(54);    
+            margin:0 0 0 rem(58);
+        }
+        p{
+            font-size:rem(38);
+            margin:rem(15) 0 rem(15) rem(456);
+        }
+    }
+    ul{
+        margin-top:rem(102);
+        display: flex;
+        flex-wrap: wrap;
+        padding:0 rem(30) 0 rem(38);
+        justify-content: space-between;
+        li{
+            width:48%;
+            padding:0 0 rem(81) 0;
+            img{
+                width:100%;
+                border-radius:rem(10);
+            }
+            p{
+                font-size:rem(34);
+                color:#ad2635;
+                small{
+                    float:right;
+                    color:#a9a9a9;
+                }
+            }
+            span{
+                font-size:rem(34);
+                margin:0 0 0 rem(15);
+            }
+        }
+    }
+}
