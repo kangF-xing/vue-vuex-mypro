@@ -10,8 +10,8 @@
         <div class="group-show-select-1">
             <h3>选择版本</h3>
             <ul>
-                <li class="show-li-1" v-for="(i,index) in i.childsCurGoods" :key="index" @click="ADDstyle(index)" :class="{showLiQH:addCLass==index}">
-                    {{i.name}}
+                <li class="show-li-1" v-for="(j,index) in i.childsCurGoods" :key="index" @click="ADDstyle(index)" :class="{showLiQH:addCLass==index}">
+                    {{j.name}}
                 </li>
             </ul>
         </div>
@@ -31,7 +31,10 @@
             </ul>
         </div>
         <div class="buy">
-            <router-link :to="{path:'/payorder/',query:{}}" >
+            <router-link :to="{path:'/payorder/',query:{
+                name:i.name,
+                
+                }}" >
                 立即购买
             </router-link>
         </div>
