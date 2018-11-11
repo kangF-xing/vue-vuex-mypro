@@ -10,7 +10,7 @@
         <div class="group-show-select-1">
             <h3>选择版本</h3>
             <ul>
-                <li class="show-li-1" v-for="(item,index) in i.childsCurGoods" :key="index" @click="ADDstyle(index,item.name)" :class="{showLiQH:addCLass==index}">
+                <li class="show-li-1" v-for="(item,index) in i.childsCurGoods" :key="index" @click="ADDstyle(index,item)" :class="{showLiQH:addCLass==index}">
                     {{item.name}}
                 </li>
             </ul>
@@ -31,7 +31,7 @@
             </ul>
         </div>
         <div class="buy">
-            <router-link @click.native="K" :to="sizename!==''||servename!==''?{path:usertoken==''||usertoken==undefined?'/register/':'/payorder/',query:{
+            <router-link v-if="!trueorfalse" @click.native="K" :to="sizename!==''||servename!==''?{path:usertoken==''||usertoken==undefined?'/register/':'/payorder/',query:{
                 id:vaid,
                 characteristic:transfer.characteristic,
                 sizename:sizename,
@@ -41,6 +41,9 @@
                 servename:servename,
                 }}:{path:'/group/GroupShow',query:{id:vaid}}">
                 立即购买
+            </router-link>
+            <router-link v-if="trueorfalse" to="" @click.native="Addcart">
+              加入购物车
             </router-link>
         </div>
         </div>
@@ -60,7 +63,7 @@ export default {
       servename: "",
       vaid: "",
       usertoken:"",
-      aaa:"",
+      trueorfalse:false,
     };
   },
   computed: {
@@ -78,20 +81,32 @@ export default {
     shut() {
       this.$store.commit("shut");
     },
-    ADDstyle(val, name) {
+    ADDstyle(val, i) {
       this.addCLass = val;
-      this.sizename = name;
+      let params = new URLSearchParams();
+      params.append('goodsId', i.id);
+      params.append('propertyChildIds', "5:14");
+      this.axios.post(global.globalData.api+"shop/goods/price",params).then(res=>{
+        console.log(res)
+      })
+      this.sizename = i.name;
     },
-    AdDstyle(val, name) {
+    AdDstyle(val, i) {
       this.addCLAss = val;
-      this.servename = name;
+      this.servename = i.name;
     },
     K() {
       if (this.sizename == "" || this.servename == "")
         alert("请选择尺码" || "请选择服务");
+    },
+    //加入购物车
+    Addcart(){
+
+
     }
   },
   mounted() {
+    this.$route.query.val==''||this.$route.query.val==undefined?this.trueorfalse=false:this.trueorfalse=true
     this.vaid = this.$route.query.id
     this.usertoken = localStorage.token
     this.axios
@@ -99,6 +114,7 @@ export default {
         global.globalData.api + "shop/goods/detail/?id=" + this.$route.query.id
       )
       .then(res => {
+        console.log(res)
         this.detailList = res.data.data.properties;
         this.transfer = res.data.data.basicInfo;
       });

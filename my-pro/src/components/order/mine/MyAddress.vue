@@ -38,7 +38,6 @@ export default {
     },
     mounted() {
         this.val=this.$route.query.val
-        console.log(this.val)
         this.axios.post(global.globalData.api+"user/shipping-address/list/?token="+localStorage.token).then(res=>{
             this.list=res.data.data
         })

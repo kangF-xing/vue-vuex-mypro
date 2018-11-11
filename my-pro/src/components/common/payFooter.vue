@@ -1,7 +1,7 @@
 <template>
     <div id="pay-footer">
         <p>合计：￥{{list.originalPrice*num}}</p>
-        <router-link to="/payprice" tag="span">
+        <router-link :to="{path:'/payprice/',query:{zj:list.originalPrice*num}}" tag="span">
             提交订单
         </router-link>
     </div>
@@ -21,7 +21,7 @@ export default {
         }
     },
     mounted() {
-        this.list=this.$route.query
+        this.list=this.$route.query.zj
     },
 }
 </script>

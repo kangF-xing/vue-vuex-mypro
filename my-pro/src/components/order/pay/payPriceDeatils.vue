@@ -7,7 +7,7 @@
         <div id="pay-price-deatils-allprice">
             <p class="iconfont icon-jinqian"></p>
             <ul>
-                <li>商品总额：<span>￥399</span></li>
+                <li>商品总额：<span>￥{{val}}</span></li>
                 <li class="OrderID">订单号：<span>od3321985632451</span></li>
             </ul>
         </div>
@@ -15,8 +15,8 @@
         <div id="pay-price-deatils-allprice">
             <p class="iconfont icon-dizhi dizhi"></p>
             <ul>
-                <li>爸爸 61656516513265</li>
-                <li class="OrderID">吉利大学</li>
+                <li>{{list.linkMan}} {{list.mobile}}</li>
+                <li class="OrderID">{{list.address}}</li>
             </ul>
         </div>
     </div>
@@ -28,10 +28,14 @@ export default {
     data(){
         return{
             list:[],
+            val:"",
         }
     },
     mounted() {
-        
+        this.val=this.$route.query.zj
+        this.axios.post(global.globalData.api+"user/shipping-address/default/?token="+localStorage.token).then(res=>{
+            this.list=res.data.data
+        })
     },
 }
 </script>

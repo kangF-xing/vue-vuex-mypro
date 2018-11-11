@@ -35,10 +35,10 @@
             </ul>
         </div>
         <div class="bgcolor"></div>
-        <div id="Choose-specifications" @click="comeOut">
+        <router-link :to="{query:{val:123,id:id}}" tag="div" id="Choose-specifications" @click.native="comeOut">
             <p>选择规格：<span>选择版本 选择服务</span></p>
             <h3>></h3>
-        </div>
+        </router-link>
         <div class="bgcolor"></div>
     </div>
 </template>
@@ -49,9 +49,11 @@ export default {
     data(){
         return{
             detailList:[],
+            id:"",
         }
     },
     mounted() {
+        this.id=this.$route.query.id
         this.axios.get(global.globalData.api+"shop/goods/detail/?id="+this.$route.query.id).then(res=>{
         this.detailList=res.data.data.basicInfo
       })

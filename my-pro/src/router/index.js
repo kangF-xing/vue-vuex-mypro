@@ -23,6 +23,11 @@ import groupChildPJ from '../components/center/groupChildPJ.vue'
 import groupChildXQ from '../components/center/groupChildXQ.vue'
 import Register from '../components/order/register/register.vue'
 import GroupShow from '../components/center/groupShow.vue'
+import MyOrderDropAppraise from '../components/order/mine/MyOrderDropAppraise.vue'
+import MyOrderDropCollect from '../components/order/mine/MyOrderDropCollect.vue'
+import MyOrderdropShipping from "../components/order/mine/MyOrderdropShipping.vue"
+import MyOrderWaitPrice from '../components/order/mine/MyOrderWaitPrice.vue'
+import MyOrderOffTheStocks from '../components/order/mine/MyOrderOffTheStocks.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -104,7 +109,28 @@ export default new Router({
     },
     {
       path:"/myorder",
-      component:MyOrder
+      component:MyOrder,
+      children:[
+        {
+          path:"/",
+          component:MyOrderWaitPrice,
+        },{
+          path:"/MyOrderdropShipping",
+          component:MyOrderdropShipping,
+        },
+        {
+          path:"/MyOrderDropCollect",
+          component:MyOrderDropCollect ,
+        },
+        {
+          path:"/MyOrderDropAppraise",
+          component:MyOrderDropAppraise,
+        },
+        {
+          path:"/MyOrderOffTheStocks",
+          component:MyOrderOffTheStocks
+        }
+      ]
     },
     {
       path:"/myaddress",
