@@ -19,7 +19,7 @@
                 <p>{{i.linkMan}} {{i.mobile}}</p>
                 <h4>{{i.address}}</h4>
             </div>
-            <router-link tag="h5" to="">✍</router-link>
+            <router-link tag="h5" :to="{path:'/myaddressvalue',query:{val:i}}">✍</router-link>
         </router-link>
         </div>
     </div>

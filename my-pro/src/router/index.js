@@ -22,6 +22,7 @@ import cutdetailsChildPJ from '../components/order/cutPrice/cupDetailsChildPJ.vu
 import groupChildPJ from '../components/center/groupChildPJ.vue'
 import groupChildXQ from '../components/center/groupChildXQ.vue'
 import Register from '../components/order/register/register.vue'
+import GroupShow from '../components/center/groupShow.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -56,6 +57,10 @@ export default new Router({
         {
           path:"/groupChildPJ/:id?",
           component:groupChildPJ
+        },
+        {
+          path:"/GroupShow/:id?",
+          component:GroupShow,
         },
       ]
     },

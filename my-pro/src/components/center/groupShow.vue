@@ -2,7 +2,7 @@
     <div id="group-show">
         <div id="group-show-content" v-for="(i,index) in detailList" :key="index">
         <div id="group-show-details">
-            <img src="../../assets/img/images/20181105135749_08.jpg" alt="">
+            <img :src="transfer.pic" alt="">
             <h3>{{i.name}}</h3>
             <p>￥{{transfer.originalPrice}}</p>
             <span @click="shut">×</span>
@@ -39,7 +39,7 @@
                 imgurl:transfer.pic,
                 originalPrice:transfer.originalPrice,
                 servename:servename,
-                }}:{path:'/group/',query:{id:vaid}}">
+                }}:{path:'/group/GroupShow',query:{id:vaid}}">
                 立即购买
             </router-link>
         </div>
