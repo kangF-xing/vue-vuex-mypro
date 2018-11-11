@@ -34,7 +34,7 @@ export default {
     methods:{
         //@click.native="comeOut"
         comeOut(){
-            this.$store.commit("comeOut")
+            this.$store.commit("comeout")
         }
     }
 }

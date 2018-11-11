@@ -21,7 +21,7 @@ export default {
         }
     },
     mounted() {
-        this.list=this.$route.query.zj
+        this.list=this.$route.query
     },
 }
 </script>

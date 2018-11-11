@@ -6,6 +6,7 @@ let store= new Vuex.Store({
     state:{
         buynum:1,
         buyshow:false,
+        parshow:false,
         kJid:"",
     },
     mutations:{
@@ -20,9 +21,14 @@ let store= new Vuex.Store({
         },
         comeOut(state){
             state.buyshow=true
+            state.parshow=true
+        },
+        comeout(state){
+            state.buyshow=true
         },
         shut(state){
             state.buyshow=false
+            state.parshow=false
         },
         kjid(state,val){
             state.kJid=val

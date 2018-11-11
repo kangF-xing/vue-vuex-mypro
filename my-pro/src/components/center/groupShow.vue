@@ -31,7 +31,7 @@
             </ul>
         </div>
         <div class="buy">
-            <router-link v-if="!trueorfalse" @click.native="K" :to="sizename!==''||servename!==''?{path:usertoken==''||usertoken==undefined?'/register/':'/payorder/',query:{
+            <router-link v-show="!parshow" @click.native="K" :to="sizename!==''||servename!==''?{path:usertoken==''||usertoken==undefined?'/register/':'/payorder/',query:{
                 id:vaid,
                 characteristic:transfer.characteristic,
                 sizename:sizename,
@@ -42,7 +42,7 @@
                 }}:{path:'/group/GroupShow',query:{id:vaid}}">
                 立即购买
             </router-link>
-            <router-link v-if="trueorfalse" to="" @click.native="Addcart">
+            <router-link v-show="parshow" :to="{path:'/group/',query:{id:vaid}}" @click.native="Addcart">
               加入购物车
             </router-link>
         </div>
@@ -63,12 +63,14 @@ export default {
       servename: "",
       vaid: "",
       usertoken:"",
-      trueorfalse:false,
     };
   },
   computed: {
     buynum() {
       return this.$store.state.buynum;
+    },
+    parshow(){
+      return this.$store.state.parshow;
     }
   },
   methods: {
@@ -96,17 +98,15 @@ export default {
       this.servename = i.name;
     },
     K() {
-      if (this.sizename == "" || this.servename == "")
-        alert("请选择尺码" || "请选择服务");
+      if (this.sizename == "" || this.servename == "")alert("请选择尺码" || "请选择服务");
     },
     //加入购物车
     Addcart(){
-
-
-    }
+      this.$store.commit("shut")
+      if (this.sizename == "" || this.servename == "")alert("请选择尺码" || "请选择服务");
+    },
   },
   mounted() {
-    this.$route.query.val==''||this.$route.query.val==undefined?this.trueorfalse=false:this.trueorfalse=true
     this.vaid = this.$route.query.id
     this.usertoken = localStorage.token
     this.axios
@@ -114,7 +114,6 @@ export default {
         global.globalData.api + "shop/goods/detail/?id=" + this.$route.query.id
       )
       .then(res => {
-        console.log(res)
         this.detailList = res.data.data.properties;
         this.transfer = res.data.data.basicInfo;
       });

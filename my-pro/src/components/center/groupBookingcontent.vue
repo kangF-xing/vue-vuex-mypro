@@ -35,9 +35,9 @@
             </ul>
         </div>
         <div class="bgcolor"></div>
-        <router-link :to="{query:{val:123,id:id}}" tag="div" id="Choose-specifications" @click.native="comeOut">
-            <p>选择规格：<span>选择版本 选择服务</span></p>
-            <h3>></h3>
+        <router-link :to="{path:'/group/',query:{val:123,id:id}}" tag="div" id="Choose-specifications" @click.native="comeOut">
+                <p>选择规格：<span>选择版本 选择服务</span></p>
+                <h3>></h3>
         </router-link>
         <div class="bgcolor"></div>
     </div>
@@ -60,8 +60,15 @@ export default {
     },
     methods:{
         comeOut(){
-            this.$store.commit("comeOut")
-        }
+            this.$store.commit("comeOut");
+    //         this.$router.push({
+    //             path:"/group",
+    //             query:{
+    //             val:"123",
+    //             id:this.id,
+    //             }
+    //   })
+        },
     }
 }
 </script>
