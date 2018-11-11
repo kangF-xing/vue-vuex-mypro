@@ -26,7 +26,7 @@ let store= new Vuex.Store({
         },
         kjid(state,val){
             state.kJid=val
-        }
+        }, 
     }
 })
 

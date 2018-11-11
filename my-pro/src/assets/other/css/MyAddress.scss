@@ -11,8 +11,61 @@
             padding:rem(15) 0 rem(40) 0;
         }
     }
+    .backgroun{
+        background:#f1f1f1;
+    }
     #my-address-content{
         background:#f1f1f1;
-        height:rem(1584);
+        #my-address-list{
+            background: #fff;
+            border-bottom:1px solid #f1f1f1;
+            position: relative;
+            padding:rem(0) 0 rem(52) rem(45);
+            h3{
+                float: left;
+                height:rem(122);
+                color: #fff;
+                margin-right:rem(70);
+                span{
+                    text-align: center;
+                    line-height:rem(40); 
+                    background: #fff;
+                    border-radius:50%;
+                    font-size:rem(30);
+                    width:rem(40);
+                    display: inline-block;
+                    height:rem(40);
+                }
+                .spanshow{
+                    text-align: center;
+                    line-height:rem(40); 
+                    background: red;
+                    border-radius:50%;
+                    font-size:rem(30);
+                    width:rem(40);
+                    display: inline-block;
+                    height:rem(40);
+                }
+            }
+            div{
+                padding:rem(30) 0 0 0;
+                p{
+                    font-size:rem(35);
+                    margin-bottom:rem(32);
+                }
+                h4{
+                    font-size:rem(34);
+                    color:#8b8b8b;
+                }
+            }
+            h5{
+                position: absolute;
+                right:rem(46);
+                top:rem(42);
+                font-size:rem(32);
+                color: #8b8b8b;
+                float: right;
+            }
+        }
     }
 }

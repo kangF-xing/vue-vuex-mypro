@@ -21,6 +21,7 @@ import cutdetailsChildXQ from '../components/order/cutPrice/cupDetailsChildXQ.vu
 import cutdetailsChildPJ from '../components/order/cutPrice/cupDetailsChildPJ.vue'
 import groupChildPJ from '../components/center/groupChildPJ.vue'
 import groupChildXQ from '../components/center/groupChildXQ.vue'
+import Register from '../components/order/register/register.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -115,6 +116,10 @@ export default new Router({
     {
       path:"/payprice",
       component:payPrice,
+    },
+    {
+      path:"/register/:id?",
+      component:Register
     }
   ]
 })

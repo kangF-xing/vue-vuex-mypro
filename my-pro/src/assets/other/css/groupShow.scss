@@ -9,7 +9,6 @@
         position: fixed;
         background:#fff;
         width:100%;
-
         bottom:0;
         #group-show-details{
             margin-left:rem(41);
@@ -56,22 +55,22 @@
                 display: flex;
                 flex-wrap:wrap;
                 .show-li-1{
-                    padding:rem(27) rem(40) rem(27) rem(37);
-                    margin:0 rem(27) rem(27) 0;
+                    padding:rem(27) rem(35) rem(27) rem(37);
+                    margin:0 rem(25) rem(27) 0;
                     font-size:rem(35);
                     border:2px solid #dddddd;
                 }
                 .showLiQH{
                     border:2px solid #b6272b;
-                    margin-right:rem(27);
+                    margin:0 rem(25) rem(27) 0;
                     color:#b6272b;
-                    padding:rem(27) rem(40) rem(27) rem(37);
+                    padding:rem(27) rem(35) rem(27) rem(37);
                 }
                 .showLiqH{
                     border:2px solid #b6272b;
-                    margin-right:rem(27);
+                    margin:0 rem(25) rem(27) 0;
                     color:#b6272b;
-                    padding:rem(27) rem(40) rem(27) rem(37);
+                    padding:rem(27) rem(35) rem(27) rem(37);
                 }
             }
         }

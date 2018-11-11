@@ -1,6 +1,6 @@
 <template>
     <div id="pay-footer">
-        <p>合计：￥399</p>
+        <p>合计：￥{{list.originalPrice*num}}</p>
         <router-link to="/payprice" tag="span">
             提交订单
         </router-link>
@@ -10,7 +10,19 @@
 <script>
 import '../../assets/other/css/payFooter.scss'
 export default {
-
+    data(){
+        return{
+            list:[],
+        }
+    },
+    computed:{
+        num(){
+            return this.$store.state.buynum
+        }
+    },
+    mounted() {
+        this.list=this.$route.query
+    },
 }
 </script>
 

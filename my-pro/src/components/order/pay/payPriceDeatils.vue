@@ -25,7 +25,14 @@
 <script>
 import '../../../assets/other/css/paypricedeatils.scss'
 export default {
-
+    data(){
+        return{
+            list:[],
+        }
+    },
+    mounted() {
+        
+    },
 }
 </script>
 
