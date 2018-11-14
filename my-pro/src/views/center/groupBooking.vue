@@ -8,7 +8,6 @@
             </div>
             <groupShow v-show="buynum"></groupShow>
         </div>
-        
         <groupFooter></groupFooter>
     </div>
 </template>
@@ -31,17 +30,29 @@ export default {
         buynum(){
             return this.$store.state.buyshow
         }
+    },
+    methods:{
+    //     _initScroll(){
+    //     this.menuScroll = new BScroll(this.$refs.menuWrapper, {})
+    //     this.foodsScroll = new BScroll(this.$refs.foodsWrapper, {})
+    //   }
+    },
+    mounted() {
+        // this.$nextTick(()=>{
+        //     this._initScroll()
+        // })
     }
 }
+    
 </script>
 
 <style>
 #group{
     display: flex;
+    height:100%;
     flex-direction: column;
 }
 .group{
-    flex: 1;
-    overflow: auto;
+    overflow: scroll;
 }
 </style>

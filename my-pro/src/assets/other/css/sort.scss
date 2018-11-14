@@ -9,9 +9,9 @@
         ul{
             li{
                 font-size:rem(40);
-                padding:25px 0 30px 50px;
+                padding:rem(25) 0 rem(30) rem(50);
                 border-left:3px solid #fff;
-                margin:40px 0;
+                margin:rem(40) 0;
                 color:#000;
             }
             li:hover{border-left:3px solid #8b2926;color:#8b2926;}

@@ -21,7 +21,7 @@ export default {
         }
     },
     mounted() {
-        this.axios.get(global.globalData.api+"shop/goods/list").then(res=>{
+        this.axios.get("api/shop/goods/list").then(res=>{
             this.detaillist=res.data.data.filter(i=>{
                 return i.recommendStatusStr=="推荐"
             })

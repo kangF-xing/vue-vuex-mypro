@@ -30,10 +30,10 @@ export default {
         }
     },
     mounted() {
-        this.axios.get(global.globalData.api+"cms/news/detail?id="+this.$route.query.id).then(res=>{
+        this.axios.get("/api/cms/news/detail?id="+this.$route.query.id).then(res=>{
             this.list=res.data.data
         })
-        this.axios.get(global.globalData.api+"shop/goods/list").then(res=>{
+        this.axios.get("/api/shop/goods/list").then(res=>{
             this.detaillist=res.data.data.filter(i=>{
                 return i.recommendStatusStr=="推荐"&&i.kanjia!==true
             })

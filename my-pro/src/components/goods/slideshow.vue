@@ -2,15 +2,13 @@
     <div id="Slideshow" >
   <swiper :options="swiperOption" v-if="list.length>0">
     <!-- slides -->
-    <swiper-slide v-for="(i,index) in list" :key="index" >
+    <swiper-slide v-for="(i,index) in list" :key="index">
         <router-link to="/group">
         <img :src="i.picUrl" alt="">
         </router-link>
     </swiper-slide>   
     <!-- Optional controls -->
     <div class="swiper-pagination"  slot="pagination"></div>
-    <div class="swiper-button-prev" slot="button-prev"></div>
-    <div class="swiper-button-next" slot="button-next"></div>
     <div class="swiper-scrollbar"   slot="scrollbar"></div>
   </swiper>
   </div>
@@ -39,7 +37,7 @@ export default {
      
     },
     mounted() {
-      this.axios.get(global.globalData.api+"banner/list").then(res=>{
+      this.axios.get("api/banner/list").then(res=>{
           this.list=res.data.data
       })
     }

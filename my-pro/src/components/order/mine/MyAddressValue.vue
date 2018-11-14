@@ -77,7 +77,7 @@ export default {
                 params.append('linkMan', this.linkMan);
                 params.append('provinceId', '750001');
                 params.append('token', localStorage.token);
-                this.axios.post(global.globalData.api+"user/shipping-address/add",params).then(res=>{
+                this.axios.post("api/user/shipping-address/add",params).then(res=>{
                 })
             }else{
                 let params = new URLSearchParams();
@@ -89,7 +89,7 @@ export default {
                 params.append('provinceId', '750001');
                 params.append('id', this.id);
                 params.append('token', localStorage.token);
-                this.axios.post(global.globalData.api+'user/shipping-address/update',params).then(res=>{
+                this.axios.post('api/user/shipping-address/update',params).then(res=>{
                 })
             }
         },
@@ -97,7 +97,7 @@ export default {
             let params = new URLSearchParams();
             params.append('id', this.id);
             params.append('token', localStorage.token);
-            this.axios.post(global.globalData.api+"user/shipping-address/delete",params).then(res=>{
+            this.axios.post("api/user/shipping-address/delete",params).then(res=>{
                 
             })
         }

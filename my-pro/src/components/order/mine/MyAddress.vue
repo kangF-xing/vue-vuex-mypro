@@ -38,7 +38,7 @@ export default {
     },
     mounted() {
         this.val=this.$route.query.val
-        this.axios.post(global.globalData.api+"user/shipping-address/list/?token="+localStorage.token).then(res=>{
+        this.axios.post("/api/user/shipping-address/list/?token="+localStorage.token).then(res=>{
             this.list=res.data.data
         })
         if(this.list.length>0)this.back=true
@@ -47,7 +47,7 @@ export default {
     methods:{
         defaultAdd(val){
             this.shownum=val
-            this.axios.post(global.globalData.api+"user/shipping-address/default/?token="+localStorage.token).then(res=>{
+            this.axios.post("/api/user/shipping-address/default/?token="+localStorage.token).then(res=>{
             })
         }
     }

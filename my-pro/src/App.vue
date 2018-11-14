@@ -8,6 +8,9 @@
 import IScroll from 'iscroll'
 export default {
   name: 'App',
+  mounted() {
+
+  },
 
 }
 </script>

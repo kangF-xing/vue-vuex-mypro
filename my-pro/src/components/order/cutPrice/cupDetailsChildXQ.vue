@@ -11,7 +11,7 @@ export default {
         }
     },
     mounted() {
-        this.axios.post(global.globalData.api+"shop/goods/detail?id="+this.$route.query.id).then(res=>{
+        this.axios.post("/api/shop/goods/detail?id="+this.$route.query.id).then(res=>{
             this.contentList=res.data.data.content
      })
     },
@@ -19,5 +19,6 @@ export default {
 </script>
 
 <style>
-
+#cupDetailChildXQ img{width: 100% !important}
+#cupDetailChildXQ span{width:100%!important}
 </style>

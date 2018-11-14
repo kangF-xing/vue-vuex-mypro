@@ -13,7 +13,7 @@ export default {
         }
     },
     mounted() {
-        this.axios.post(global.globalData.api+"shop/goods/detail?id="+this.$route.query.id).then(res=>{
+        this.axios.post("/api/shop/goods/detail?id="+this.$route.query.id).then(res=>{
             this.contentList=res.data.data.content
      })
     },

@@ -63,6 +63,7 @@ export default {
       servename: "",
       vaid: "",
       usertoken:"",
+      arrayObject:[],
     };
   },
   computed: {
@@ -85,13 +86,10 @@ export default {
     },
     ADDstyle(val, i) {
       this.addCLass = val;
-      let params = new URLSearchParams();
-      params.append('goodsId', i.id);
-      params.append('propertyChildIds', "5:14");
-      this.axios.post(global.globalData.api+"shop/goods/price",params).then(res=>{
-        console.log(res)
-      })
       this.sizename = i.name;
+      // this.axios.post("api/shop/goods/price/").then((res)=>{
+
+      // })  
     },
     AdDstyle(val, i) {
       this.addCLAss = val;
@@ -104,6 +102,31 @@ export default {
     Addcart(){
       this.$store.commit("shut")
       if (this.sizename == "" || this.servename == "")alert("请选择尺码" || "请选择服务");
+      var arra={
+        sizename:this.sizename,
+        servename:this.servename,
+        imgurl:this.transfer.pic,
+        characteristic:this.transfer.characteristic,
+        name:this.transfer.name,
+        originalPrice:this.transfer.originalPrice,
+        num:this.buynum,
+        trueorfalse:false,
+        }
+        
+      //读取 //重新转换为对象
+    var str=JSON.parse(localStorage.getItem("arr"));
+      str.push(arra)
+      localStorage.arr=JSON.stringify(str);
+      this.$store.commit("buynum",1)
+      this.$store.commit("ADDcart",str)
+
+    // 定义数组传入本地存储
+  
+// localStorage.setItem("arr", JSON.stringify(arr))
+// var arr = JSON.parse(localStorage.getItem("arr"))
+// arr.push(this.vaid)
+// localStorage.setItem("arr", JSON.stringify(arr))
+
     },
   },
   mounted() {
@@ -111,7 +134,7 @@ export default {
     this.usertoken = localStorage.token
     this.axios
       .get(
-        global.globalData.api + "shop/goods/detail/?id=" + this.$route.query.id
+         "/api/shop/goods/detail/?id=" + this.$route.query.id
       )
       .then(res => {
         this.detailList = res.data.data.properties;

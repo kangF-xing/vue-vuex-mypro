@@ -18,9 +18,14 @@
             p{
                 font-size:rem(35);
                 margin:rem(63) 0 0 0;
+                overflow: hidden;
+                display:block;
+                word-break:keep-all;
+                white-space:nowrap;
+                text-overflow:ellipsis;
                 span{
                     float: right;
-                    width:rem(300);
+                    width:rem(200);
                     text-align: right;
                 }
             }

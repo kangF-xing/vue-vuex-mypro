@@ -25,6 +25,7 @@ export default {
 
 <style>
 #cutDetails{
+    height:100%;
     display: flex;
     flex-direction: column;
 }

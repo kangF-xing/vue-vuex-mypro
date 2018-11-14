@@ -35,7 +35,7 @@
             </ul>
         </div>
         <div class="bgcolor"></div>
-        <router-link :to="{path:'/group/',query:{val:123,id:id}}" tag="div" id="Choose-specifications" @click.native="comeOut">
+        <router-link :to="{path:'/group/',query:{id:id}}" tag="div" id="Choose-specifications" @click.native="comeOut">
                 <p>选择规格：<span>选择版本 选择服务</span></p>
                 <h3>></h3>
         </router-link>
@@ -54,20 +54,13 @@ export default {
     },
     mounted() {
         this.id=this.$route.query.id
-        this.axios.get(global.globalData.api+"shop/goods/detail/?id="+this.$route.query.id).then(res=>{
+        this.axios.get("/api/shop/goods/detail/?id="+this.$route.query.id).then(res=>{
         this.detailList=res.data.data.basicInfo
       })
     },
     methods:{
         comeOut(){
             this.$store.commit("comeOut");
-    //         this.$router.push({
-    //             path:"/group",
-    //             query:{
-    //             val:"123",
-    //             id:this.id,
-    //             }
-    //   })
         },
     }
 }

@@ -3,10 +3,11 @@
         display: flex;
         flex-wrap: wrap; 
     }
-    p{
-        .img-lazyload{
-            width:100%;
+    p{ 
+        .img-lazyloaded{
+            width:100%!important
         }
+        
     }
    
 }

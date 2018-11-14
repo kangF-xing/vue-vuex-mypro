@@ -7,8 +7,6 @@
     </swiper-slide>
     <!-- Optional controls -->
     <div class="swiper-pagination"  slot="pagination"></div>
-    <div class="swiper-button-prev" slot="button-prev"></div>
-    <div class="swiper-button-next" slot="button-next"></div>
     <div class="swiper-scrollbar"   slot="scrollbar"></div>
   </swiper>
     </div>
@@ -38,7 +36,7 @@ export default {
       }
     },
     mounted() {
-      this.axios.get(global.globalData.api+"shop/goods/detail/?id="+this.$route.query.id).then(res=>{
+      this.axios.get("/api/shop/goods/detail/?id="+this.$route.query.id).then(res=>{
         this.picList=res.data.data.pics
       })
     },

@@ -17,7 +17,11 @@
 <script>
 import '../../../assets/other/css/Giftcertificate.scss'
 export default {
-
+    mounted() {
+        this.axios.get('api/discounts/coupons').then(res=>{
+            console.log(res)
+        })  
+    },
 }
 </script>
 

@@ -27,7 +27,7 @@ export default {
     },
     mounted() {
         this.val=this.$route.query.id
-        this.axios.get(global.globalData.api+"shop/goods/detail/?id="+this.$route.query.id).then(res=>{
+        this.axios.get("/api/shop/goods/detail/?id="+this.$route.query.id).then(res=>{
         this.detailList=res.data.data.basicInfo
       })
     },

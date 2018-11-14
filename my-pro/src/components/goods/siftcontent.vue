@@ -26,7 +26,7 @@ export default {
         }
     },
     mounted() {
-        this.axios.get(global.globalData.api+"cms/news/list").then(res=>{
+        this.axios.get("api/cms/news/list").then(res=>{
             this.list=res.data.data
         })
 

@@ -13,7 +13,6 @@
 </template>
 
 <script>
-import IScroll from 'iscroll'
 import MineHeader from '../../components/order/mine/mineheader'
 import MineNotice from '../../components/order/mine/minenotice'
 import Mineorder from '../../components/order/mine/mineorder'
@@ -28,7 +27,6 @@ export default {
        Footer
     },
     mounted() {
-        new IScroll("#mine")
     },
 }
 </script>

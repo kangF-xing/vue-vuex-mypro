@@ -32,7 +32,7 @@ export default {
         }
     },
     mounted() {
-        this.axios.post(global.globalData.api+"shop/goods/category/all").then(res=>{
+        this.axios.post("api/shop/goods/category/all").then(res=>{
             this.listContent=res.data.data
             this.list=this.listContent
             this.navList=res.data.data.filter(i=>{

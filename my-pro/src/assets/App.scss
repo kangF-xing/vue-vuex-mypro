@@ -45,6 +45,7 @@
 @import './other/css/MyOrderDropcollect.scss';
 @import './other/css/MyOrderDropAppraise.scss';
 @import './other/css/MyOrderOffTheStocks.scss';
+@import './other/css/cupLump.scss';
 div,body,html,h1,h2,h3,h4,h5,p,ul,ol,span,img{
     margin:0;
     padding:0;
@@ -62,10 +63,9 @@ body,html{
     width:100%;
     height:100%;
     #app{
-        width:100%;
         height:100%;
-        display:flex;
-        flex-direction:column;
+        flex: 1;
+        overflow:auto;
     }
 }
 

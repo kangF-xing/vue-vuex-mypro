@@ -11,6 +11,7 @@ import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
 import store from './store/store'
 import axios from 'axios'
+import VueScroller  from 'vue-scroller'
 
 
 
@@ -21,6 +22,8 @@ Vue.prototype.axios = axios;
 Vue.use(VueAwesomeSwiper, /* { default global options } */)
 Vue.config.productionTip = false
 Vue.use(ElementUI);
+
+Vue.use(VueScroller)
 
 /* eslint-disable no-new */
 new Vue({

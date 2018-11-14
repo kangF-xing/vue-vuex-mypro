@@ -17,7 +17,6 @@
 </template>
 
 <script>
-import IScroll from 'iscroll'
 import '../../assets/other/css/index.scss'
 import Slideshow from '../../components/goods/slideshow'
 import Nav from '../../components/goods/nav'
@@ -37,7 +36,6 @@ export default {
         Footer
     },
     mounted() {
-        new IScroll("#conatiner")
     },
 }
 </script>

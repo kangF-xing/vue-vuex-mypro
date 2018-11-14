@@ -30,7 +30,7 @@ export default {
     },
     mounted() {
         this.listone=this.$route.query
-        this.axios.post(global.globalData.api+"user/shipping-address/default/?token="+localStorage.token).then(res=>{
+        this.axios.post("/api/user/shipping-address/default/?token="+localStorage.token).then(res=>{
             this.list=res.data.data
         })
     },

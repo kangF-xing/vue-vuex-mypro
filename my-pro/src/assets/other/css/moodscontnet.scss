@@ -1,5 +1,5 @@
 #Hitscontent{
-    padding: 0 0 rem(123.75) 0;
+    padding: 0 0 0 0;
     h2{
         text-align: center;
         margin:rem(39.998) 0 rem(49.96875) 0;
@@ -29,7 +29,8 @@
             }
             h3{
                 font-size:rem(39);
-                height:rem(50);
+                font-weight:100;
+                padding:rem(10) 0;
                 overflow:hidden;
                 word-break:keep-all;
                 white-space:nowrap;
@@ -38,6 +39,8 @@
             h4{
                 font-size:rem(25.996875);
                 height:rem(40.996875);
+                padding:rem(0) 0 rem(10) 0;
+                font-weight:100;
                 overflow:hidden;
                 word-break:keep-all;
                 white-space:nowrap;
@@ -46,6 +49,7 @@
             p{
                 font-size:rem(33.99984375);
                 color: #ab2b2b;
+                padding:rem(10);
             }
         }
     }
