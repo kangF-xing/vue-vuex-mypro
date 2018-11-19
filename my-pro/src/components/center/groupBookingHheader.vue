@@ -13,36 +13,39 @@
 </template>
 
 <script>
-import '../../assets/other/css/groupBookingHeader.scss'
+import "../../assets/other/css/groupBookingHeader.scss";
 export default {
-    data() {
-      return {
-        picList:[],
-        swiperOption: {
-          loop:true,
-            pagination: {
-            el: '.swiper-pagination',
-            },
-            autoplay:{
-            delay:2500,
-            disableOnInteraction: false,
-            }
+  data() {
+    return {
+      picList: [],
+      swiperOption: {
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination"
+        },
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false
         }
       }
-    },
-    computed: {
-      swiper() {
-        return this.$refs.mySwiper.swiper
-      }
-    },
-    mounted() {
-      this.axios.get("/api/shop/goods/detail/?id="+this.$route.query.id).then(res=>{
-        this.picList=res.data.data.pics
-      })
-    },
-}
+    };
+  },
+  computed: {
+    swiper() {
+      return this.$refs.mySwiper.swiper;
+    }
+  },
+  mounted() {
+    this.axios
+      .get(
+        global.globalData.api + "shop/goods/detail/?id=" + this.$route.query.id
+      )
+      .then(res => {
+        this.picList = res.data.data.pics;
+      });
+  }
+};
 </script>
 
 <style>
-
 </style>

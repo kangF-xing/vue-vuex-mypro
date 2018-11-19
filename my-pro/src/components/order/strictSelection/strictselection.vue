@@ -1,7 +1,7 @@
 <template>
     <div id="strict-selection">
         <div id="strict-header">
-            <span>＜</span>
+            <span @click="go">＜</span>
             <p>严选专栏</p>
         </div>
         <div id="strict-nav">
@@ -21,23 +21,26 @@
 
 <script>
 export default {
-    data(){
-        return{
-            list:[],
-        }
-    },
-    mounted() {
-         this.axios.get("api/cms/news/list").then(res=>{
-             console.log(res)
-            this.list=res.data.data.filter(i=>{
-                return i.isRecommend==true
-            })
-        })
-
-    },
-}
+  data() {
+    return {
+      list: []
+    };
+  },
+  methods: {
+    go() {
+      this.$router.go(-1);
+    }
+  },
+  mounted() {
+    this.axios.get(global.globalData.api + "cms/news/list").then(res => {
+      console.log(res);
+      this.list = res.data.data.filter(i => {
+        return i.isRecommend == true;
+      });
+    });
+  }
+};
 </script>
 
 <style>
-
 </style>

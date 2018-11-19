@@ -22,49 +22,49 @@
 </template>
 
 <script>
-import "@/assets/other/css/sort.scss"
+import "@/assets/other/css/sort.scss";
 export default {
-    data(){
-        return{
-            navList:[],
-            list:[],
-            listContent:[],
-        }
-    },
-    mounted() {
-        this.axios.post("api/shop/goods/category/all").then(res=>{
-            this.listContent=res.data.data
-            this.list=this.listContent
-            this.navList=res.data.data.filter(i=>{
-                return i.level==1
-            })
-        })
-    },
-    methods:{
-        screen(val){
-            if(val==0){
-                this.list=this.listContent.filter(i=>{
-                    return i.type=="jujia2"
-                })
-            }else if(val==1){
-                this.list=this.listContent.filter(i=>{
-                    return i.type=="peishi2"
-                })
-            }
-            else if(val==2){
-                this.list=this.listContent.filter(i=>{
-                    return i.type=="fuzhuang"
-                })
-            }else if(val==3){
-               this.list=this.listContent.filter(i=>{
-                    return i.type=="dianqi2"
-                }) 
-            }
-        }
+  data() {
+    return {
+      navList: [],
+      list: [],
+      listContent: []
+    };
+  },
+  mounted() {
+    this.axios
+      .post(global.globalData.api + "shop/goods/category/all")
+      .then(res => {
+        this.listContent = res.data.data;
+        this.list = this.listContent;
+        this.navList = res.data.data.filter(i => {
+          return i.level == 1;
+        });
+      });
+  },
+  methods: {
+    screen(val) {
+      if (val == 0) {
+        this.list = this.listContent.filter(i => {
+          return i.type == "jujia2";
+        });
+      } else if (val == 1) {
+        this.list = this.listContent.filter(i => {
+          return i.type == "peishi2";
+        });
+      } else if (val == 2) {
+        this.list = this.listContent.filter(i => {
+          return i.type == "fuzhuang";
+        });
+      } else if (val == 3) {
+        this.list = this.listContent.filter(i => {
+          return i.type == "dianqi2";
+        });
+      }
     }
-}
+  }
+};
 </script>
 
 <style>
-
 </style>

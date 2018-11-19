@@ -1,7 +1,7 @@
 <template>
     <div id="my-address">
         <div id="my-address-header">
-            <span>＜</span>
+            <span @click="go">＜</span>
             <p>我的地址</p>
         </div>
         <div id="my-address-content" :class="{backgroun:back==true}">
@@ -26,34 +26,47 @@
 </template>
 
 <script>
-import '../../../assets/other/css/MyAddress.scss'
+import "../../../assets/other/css/MyAddress.scss";
 export default {
-    data(){
-        return{
-            list:[],
-            back:false,
-            shownum:0,
-            val:[],
-        }
+  data() {
+    return {
+      list: [],
+      back: false,
+      shownum: 0,
+      val: []
+    };
+  },
+  mounted() {
+    this.val = this.$route.query.val;
+    this.axios
+      .post(
+        global.globalData.api +
+          "user/shipping-address/list/?token=" +
+          localStorage.token
+      )
+      .then(res => {
+        this.list = res.data.data;
+      });
+    if (this.list.length > 0) this.back = true;
+    this.list = this.list.reverse();
+  },
+  methods: {
+    defaultAdd(val) {
+      this.shownum = val;
+      this.axios
+        .post(
+          global.globalData.api +
+            "user/shipping-address/default/?token=" +
+            localStorage.token
+        )
+        .then(res => {});
     },
-    mounted() {
-        this.val=this.$route.query.val
-        this.axios.post("/api/user/shipping-address/list/?token="+localStorage.token).then(res=>{
-            this.list=res.data.data
-        })
-        if(this.list.length>0)this.back=true
-        this.list=this.list.reverse()
-    },
-    methods:{
-        defaultAdd(val){
-            this.shownum=val
-            this.axios.post("/api/user/shipping-address/default/?token="+localStorage.token).then(res=>{
-            })
-        }
+    go() {
+      this.$router.go(-1);
     }
-}
+  }
+};
 </script>
 
 <style>
-
 </style>

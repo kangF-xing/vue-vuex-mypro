@@ -1,12 +1,5 @@
 <template>
-    <router-link :to="code==0&&localStorageVal!=null&&localStorageUid!=null?{path:'/cupLump/',query:{
-        pic:detailV.pic,
-        originalPrice:detailV.originalPrice,
-        name:detailV.name,
-        kanjiaPrice:detailV.kanjiaPrice,
-        kjid:kjid,
-        characteristic:detailV.characteristic,
-        }}:{path:'/register/',query:{id:id,kjid:kjid,val:1}}" tag="div" id="cut-details-footer" @click.native="openFire">
+    <router-link to="" tag="div" id="cut-details-footer" @click.native="openFire">
             立即发起砍价，最低可砍到{{detailV.kanjiaPrice}}
     </router-link>
 </template>
@@ -30,7 +23,9 @@ export default {
     this.kjid = this.$route.query.kjid;
     this.id = this.$route.query.id;
     this.axios
-      .post("/api/shop/goods/detail?id=" + this.$route.query.id)
+      .post(
+        global.globalData.api + "shop/goods/detail?id=" + this.$route.query.id
+      )
       .then(res => {
         this.detailV = res.data.data.basicInfo;
       });
@@ -40,9 +35,37 @@ export default {
       let params = new URLSearchParams();
       params.append("token", this.localStorageVal);
       params.append("kjid", this.kjid);
-      this.axios.post("/api/shop/goods/kanjia/join/", params).then(res => {
-        this.code = res.data.code;
-      });
+      this.axios
+        .post(global.globalData.api + "shop/goods/kanjia/join/", params)
+        .then(res => {
+          if (
+            res.data.code == 0 &&
+            this.localStorageVal != null &&
+            this.localStorageUid != null
+          ) {
+            this.$router.push({
+              path: "/cupLump/",
+              query: {
+                pic: this.detailV.pic,
+                originalPrice: this.detailV.originalPrice,
+                name: this.detailV.name,
+                kanjiaPrice: this.detailV.kanjiaPrice,
+                kjid: this.kjid,
+                id: this.id,
+                characteristic: this.detailV.characteristic
+              }
+            });
+          } else {
+            this.$router.push({
+              path: "/register/",
+              query: {
+                id: this.id,
+                kjid: this.kjid,
+                val: 1
+              }
+            });
+          }
+        });
     }
   }
 };

@@ -26,18 +26,20 @@ export default {
     };
   },
   mounted() {
-    this.axios.get("api/shop/goods/list").then(res => {
+    this.axios.get(global.globalData.api + "shop/goods/list").then(res => {
       this.detaillist = res.data.data.filter(i => {
         return i.kanjia == true;
       });
     });
-    this.axios.get("api/shop/goods/kanjia/list").then(res => {
-      this.idlist = res.data.data.result.reverse();
-      this.idlist = this.idlist.map(i => {
-        return i.id;
+    this.axios
+      .get(global.globalData.api + "shop/goods/kanjia/list")
+      .then(res => {
+        this.idlist = res.data.data.result.reverse();
+        this.idlist = this.idlist.map(i => {
+          return i.id;
+        });
+        this.$store.commit("KJID", this.idlist);
       });
-      this.$store.commit("KJID", this.idlist);
-    });
   }
 };
 </script>

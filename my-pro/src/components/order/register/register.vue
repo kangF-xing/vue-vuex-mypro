@@ -32,7 +32,10 @@ export default {
       query.append("mobile", this.usernameVal);
       query.append("pwd", this.userpassVal);
       this.axios
-        .post("/api/user/m/login/?deviceId=1231&deviceName=6165", query)
+        .post(
+          global.globalData.api + "user/m/login/?deviceId=1231&deviceName=6165",
+          query
+        )
         .then(res => {
           console.log(res);
           localStorage.token = res.data.data.token;
@@ -47,6 +50,18 @@ export default {
                 query: {
                   id: this.list.id,
                   kjid: this.list.kjid
+                }
+              });
+            } else if (this.list.val == 2) {
+              this.$router.push({
+                path: "/cupLump/",
+                query: {
+                  id: this.list.id,
+                  kjid: this.list.kjid,
+                  pic: this.list.pic,
+                  kanjiaPrice: this.kanjiaPrice,
+                  originalPrice: this.originalPrice,
+                  name: this.name
                 }
               });
             } else {

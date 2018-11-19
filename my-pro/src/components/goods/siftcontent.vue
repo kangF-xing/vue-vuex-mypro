@@ -17,21 +17,20 @@
 </template>
 
 <script>
-import '../../assets/other/css/siftcontent.scss'
+import "../../assets/other/css/siftcontent.scss";
 
 export default {
-    data(){
-        return{
-            list:[],
-        }
-    },
-    mounted() {
-        this.axios.get("api/cms/news/list").then(res=>{
-            this.list=res.data.data
-        })
-
-    },
-}
+  data() {
+    return {
+      list: []
+    };
+  },
+  mounted() {
+    this.axios.get(global.globalData.api + "cms/news/list").then(res => {
+      this.list = res.data.data;
+    });
+  }
+};
 </script>
 
 <style>

@@ -44,28 +44,32 @@
 </template>
 
 <script>
-import '../../assets/other/css/groupBookingcontent.scss'
+import "../../assets/other/css/groupBookingcontent.scss";
 export default {
-    data(){
-        return{
-            detailList:[],
-            id:"",
-        }
-    },
-    mounted() {
-        this.id=this.$route.query.id
-        this.axios.get("/api/shop/goods/detail/?id="+this.$route.query.id).then(res=>{
-        this.detailList=res.data.data.basicInfo
-      })
-    },
-    methods:{
-        comeOut(){
-            this.$store.commit("comeOut");
-        },
+  data() {
+    return {
+      detailList: [],
+      id: ""
+    };
+  },
+  mounted() {
+    this.id = this.$route.query.id;
+    this.axios
+      .get(
+        global.globalData.api + "shop/goods/detail/?id=" + this.$route.query.id
+      )
+      .then(res => {
+        console.log(res);
+        this.detailList = res.data.data.basicInfo;
+      });
+  },
+  methods: {
+    comeOut() {
+      this.$store.commit("comeOut");
     }
-}
+  }
+};
 </script>
 
 <style>
-
 </style>

@@ -1,7 +1,7 @@
 <template>
     <div id="My-Order">
         <div id="My-Order-header">
-            <span>＜</span>
+            <span @click="go">＜</span>
             <p>订单列表</p>
         </div>
         <ul>
@@ -26,24 +26,26 @@
 </template>
 
 <script>
-import '../../../assets/other/css/MyOrder.scss'
+import "../../../assets/other/css/MyOrder.scss";
 export default {
-    data(){
-        return{
-            OrderAddclass:5,
-        }
+  data() {
+    return {
+      OrderAddclass: 5
+    };
+  },
+  methods: {
+    Addclass(val) {
+      this.OrderAddclass = val;
     },
-    methods:{
-        Addclass(val){
-            this.OrderAddclass=val
-        }
-    },
-    mounted() {
-        this.OrderAddclass=this.$route.query.index
-    },
-}
+    go() {
+      this.$router.go(-1);
+    }
+  },
+  mounted() {
+    this.OrderAddclass = this.$route.query.index;
+  }
+};
 </script>
 
 <style>
-
 </style>

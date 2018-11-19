@@ -6,13 +6,7 @@
         </div>
         <div id="AddValue">
             <ul class="AddValue">
-                <li>+1</li>
-                <li>+1</li>
-                <li>+1</li>
-                <li>+1</li>
-                <li>+1</li>
-                <li>+1</li>
-                <li>+10</li>
+                <li v-for="(i,index) in score" :key="index">+{{i.score}}</li>
             </ul>
             <ul class="dot">
                 <li><p></p></li>
@@ -24,13 +18,7 @@
                 <li><p></p></li>
             </ul>
             <ol>
-                <li>1天</li>
-                <li>2天</li>
-                <li>3天</li>
-                <li>4天</li>
-                <li>5天</li>
-                <li>6天</li>
-                <li>7天</li>
+                <li v-for="(i,index) in continuous" :key="index">{{i.continuous}}天</li>
             </ol>
         </div>
     </div>
@@ -38,10 +26,34 @@
 
 <script>
 export default {
-
-}
+  data() {
+    return {
+      continuous: [],
+      score: []
+    };
+  },
+  created() {
+    this.axios
+      .post(
+        global.globalData.api +
+          "score/logs/?token=" +
+          localStorage.getItem("token")
+      )
+      .then(res => {
+        this.score = res.data.data.result;
+      });
+    this.axios
+      .post(
+        global.globalData.api +
+          "score/sign/logs/?token=" +
+          localStorage.getItem("token")
+      )
+      .then(res => {
+        this.continuous = res.data.data.result;
+      });
+  }
+};
 </script>
 
 <style>
-
 </style>

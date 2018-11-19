@@ -1,13 +1,12 @@
-#groupChildXQ{
-    .list-paddingleft-2{
-        display: flex;
-        flex-wrap: wrap; 
+#groupChildXQ {
+  .list-paddingleft-2 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  p {
+    .img-lazyloaded {
+      width: 100% !important;
+      height: 100% !important;
     }
-    p{ 
-        .img-lazyloaded{
-            width:100%!important
-        }
-        
-    }
-   
+  }
 }

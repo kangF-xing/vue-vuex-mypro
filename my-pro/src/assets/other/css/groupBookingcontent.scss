@@ -1,79 +1,85 @@
-#groupBookingcontent{
-    #title{
-        padding:rem(58) 0 rem(30) rem(43);
-        h3{
-            font-size:rem(43);
-        }
-        p{
-            font-size:rem(38);
-            color:#9a9a9a;
-        }
+#groupBookingcontent {
+  #title {
+    padding: rem(58) 0 rem(30) rem(43);
+    h3 {
+      font-size: rem(43);
     }
-    #Spell-group-price{
-        height:rem(144);
-        display: flex;
-        background:#b6272d;
-        color:#fff;
-        padding:0 rem(27) 0 rem(36);
-        line-height:rem(144);
-        h3{
-            font-size:rem(48);
-            width:25%;
-            margin:0 rem(25) 0 0;
-            small{
-                font-size:rem(35);
-            }
-        }
-        ol{
-            width:63%;
-            margin-top:-15px;
-            li{
-                font-size:rem(30);
-                height:30px;
-            }
-        }
-        p{
-            font-size:rem(30);
-            float: right;
-        }
+    p {
+      font-size: rem(38);
+      color: #9a9a9a;
     }
-    .bgcolor{
-        height:rem(42);
-        background:#f5f5f5;
-        width:100%;
+  }
+  #Spell-group-price {
+    height: rem(144);
+    display: flex;
+    background: #b6272d;
+    color: #fff;
+    padding: 0 rem(27) 0 rem(36);
+
+    h3 {
+      line-height: rem(144);
+      font-size: rem(48);
+      width: 30%;
+      margin: 0 rem(25) 0 0;
+      small {
+        font-size: rem(35);
+        height: 100%;
+        display: inline-block;
+      }
     }
-    #Spell-the-group-process{
-        h3{
-            font-size:rem(44);
-            padding:rem(26) 0 rem(26) rem(30);
-        }
-        ul{
-            border-top:1px solid #f1f1f1;
-            padding:rem(30) rem(88);
-            display: flex;
-            li{
-                text-align: center;
-                padding:0 rem(10);
-                width:25%;
-                span{
-                    font-size:rem(74);
-                }
-                p{
-                    font-size:rem(30);
-                }
-            }
-        }
+    ol {
+      width: 63%;
+      height: 100%;
+      padding: rem(30) 0 0 0;
+      li {
+        font-size: rem(30);
+        line-height: none;
+        height: rem(40);
+      }
     }
-    #Choose-specifications{
-        padding:rem(50) rem(43) rem(50) rem(10);
-        display: flex;
-        justify-content: space-between;
-        p{
-            font-size:rem(36);
-        }
-        h3{
-            font-size:rem(63);
-            line-height:rem(35);
-        }
+    p {
+      line-height: rem(144);
+      font-size: rem(30);
+      float: right;
     }
+  }
+  .bgcolor {
+    height: rem(42);
+    background: #f5f5f5;
+    width: 100%;
+  }
+  #Spell-the-group-process {
+    h3 {
+      font-size: rem(44);
+      padding: rem(26) 0 rem(26) rem(30);
+    }
+    ul {
+      border-top: 1px solid #f1f1f1;
+      padding: rem(30) rem(88);
+      display: flex;
+      li {
+        text-align: center;
+        padding: 0 rem(10);
+        width: 25%;
+        span {
+          font-size: rem(74);
+        }
+        p {
+          font-size: rem(30);
+        }
+      }
+    }
+  }
+  #Choose-specifications {
+    padding: rem(50) rem(43) rem(50) rem(10);
+    display: flex;
+    justify-content: space-between;
+    p {
+      font-size: rem(36);
+    }
+    h3 {
+      font-size: rem(63);
+      line-height: rem(35);
+    }
+  }
 }

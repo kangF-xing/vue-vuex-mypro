@@ -5,16 +5,20 @@
 </template>
 
 <script>
-import IScroll from 'iscroll'
+import IScroll from "iscroll";
 export default {
-  name: 'App',
+  name: "App",
   mounted() {
-
-  },
-
-}
+    if (
+      localStorage.getItem("arr") == "" ||
+      localStorage.getItem("arr") == null
+    ) {
+      let arr = [];
+      localStorage.arr = JSON.stringify(arr);
+    }
+  }
+};
 </script>
 
 <style>
-
 </style>

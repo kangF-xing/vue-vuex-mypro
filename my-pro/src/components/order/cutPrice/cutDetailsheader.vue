@@ -45,7 +45,9 @@ export default {
   },
   mounted() {
     this.axios
-      .post("/api/shop/goods/detail?id=" + this.$route.query.id)
+      .post(
+        global.globalData.api + "shop/goods/detail?id=" + this.$route.query.id
+      )
       .then(res => {
         this.picsList = res.data.data.pics;
         this.detailV = res.data.data.basicInfo;

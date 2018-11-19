@@ -1,3 +1,3 @@
 global.globalData = {
-    api:"https://api.it120.cc/small4/"
-}
+  api: "https://api.it120.cc/small4/"
+};

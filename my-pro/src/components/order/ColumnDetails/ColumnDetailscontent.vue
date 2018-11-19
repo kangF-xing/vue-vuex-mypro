@@ -1,7 +1,7 @@
 <template>
     <div id="Column-details">
         <div id="Column-details-header">
-            <span>＜</span>
+            <span @click="go">＜</span>
             <p>专栏详情</p>
         </div>
         <div id="Column-details-content">
@@ -21,28 +21,34 @@
 </template>
 
 <script>
-import '../../../assets/other/css/ColumnDetailscontent.scss'
+import "../../../assets/other/css/ColumnDetailscontent.scss";
 export default {
-    data(){
-        return{
-            list:[],
-            detaillist:[],
-        }
-    },
-    mounted() {
-        this.axios.get("/api/cms/news/detail?id="+this.$route.query.id).then(res=>{
-            this.list=res.data.data
-        })
-        this.axios.get("/api/shop/goods/list").then(res=>{
-            this.detaillist=res.data.data.filter(i=>{
-                return i.recommendStatusStr=="推荐"&&i.kanjia!==true
-            })
-            console.log(this.detaillist)
-        })
-    },  
-}
+  data() {
+    return {
+      list: [],
+      detaillist: []
+    };
+  },
+  methods: {
+    go() {
+      this.$router.go(-1);
+    }
+  },
+  mounted() {
+    this.axios
+      .get(global.globalData.api + "cms/news/detail?id=" + this.$route.query.id)
+      .then(res => {
+        this.list = res.data.data;
+      });
+    this.axios.get(global.globalData.api + "shop/goods/list").then(res => {
+      this.detaillist = res.data.data.filter(i => {
+        return i.recommendStatusStr == "推荐" && i.kanjia !== true;
+      });
+      console.log(this.detaillist);
+    });
+  }
+};
 </script>
 
 <style>
-
 </style>

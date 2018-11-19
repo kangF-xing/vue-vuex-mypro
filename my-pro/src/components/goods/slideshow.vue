@@ -15,35 +15,32 @@
 </template>
 
 <script>
-import "../../assets/other/css/slideshow.scss"
+import "../../assets/other/css/slideshow.scss";
 export default {
-    name: 'carrousel',
-    data() {
-      return {
-        swiperOption: {
-            loop:true,
-            pagination: {
-            el: '.swiper-pagination',
-            },
-            autoplay:{
-            delay:2500,
-            disableOnInteraction: false,
-            },
+  name: "carrousel",
+  data() {
+    return {
+      swiperOption: {
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination"
         },
-          list:[],
-      }
-    },
-    computed: {
-     
-    },
-    mounted() {
-      this.axios.get("api/banner/list").then(res=>{
-          this.list=res.data.data
-      })
-    }
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false
+        }
+      },
+      list: []
+    };
+  },
+  computed: {},
+  mounted() {
+    this.axios.get(global.globalData.api + "banner/list").then(res => {
+      this.list = res.data.data;
+    });
   }
+};
 </script>
 
 <style>
-
 </style>

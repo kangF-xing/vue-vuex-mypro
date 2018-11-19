@@ -8,7 +8,7 @@
                     <span>￥{{i.originalPrice}}</span>
                 </p>
                 <p class="fu">{{i.characteristic}}</p>
-                <h4>选择版本:{{l.sizename}}  
+                <h4>选择版本:{{i.sizename}}  
                     选择服务:{{i.servename}}</h4>
                 <h5>x {{i.num}}</h5>
             </li>
@@ -56,10 +56,10 @@ export default {
   data() {
     return {
       list: [],
-      listcart:[],
+      listcart: [],
       searchBarFixed: false,
-      cartoriginalPrice:0,
-      trueorfalse:true,
+      cartoriginalPrice: 0,
+      trueorfalse: true
     };
   },
   computed: {
@@ -68,19 +68,19 @@ export default {
     }
   },
   mounted() {
-      this.list = this.$route.query;
-      if(this.list==''||this.list==undefined){
-        this.listcart=JSON.parse(localStorage.getItem("arr"))
-           this.listcart.map(i=>{
-            this.cartoriginalPrice+=i.originalPrice*i.num
-            this.trueorfalse=false
-        })
-      }else{
-          console.log(this.list)
-      }
-     //this.$refs.myproOL.
-  },
-  methods: {}
+    this.list = this.$route.query;
+    if (this.list.name == "" || this.list.name == undefined) {
+      this.listcart = JSON.parse(localStorage.getItem("arr"));
+      this.trueorfalse = false;
+      this.listcart = this.listcart.filter(i => {
+        return i.trueorfalse == false;
+      });
+      this.listcart.map(i => {
+        this.cartoriginalPrice += i.num * i.originalPrice;
+      });
+    } else {
+    }
+  }
 };
 </script>
 

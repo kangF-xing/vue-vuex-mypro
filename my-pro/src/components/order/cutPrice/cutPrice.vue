@@ -1,7 +1,7 @@
 <template>
     <div id="cut-Price">
         <div id="cut-header">
-            <span>＜</span>
+            <span @click="go">＜</span>
             <p>砍价列表</p>
         </div>
         <ul id="cut-list">
@@ -41,8 +41,13 @@ export default {
       return this.$store.state.KJID;
     }
   },
+  methods: {
+    go() {
+      this.$router.go(-1);
+    }
+  },
   mounted() {
-    this.axios.get("api/shop/goods/list").then(res => {
+    this.axios.get(global.globalData.api + "shop/goods/list").then(res => {
       this.Pricelist = res.data.data.filter(i => {
         return i.kanjia == true;
       });

@@ -1,71 +1,86 @@
 @function rem($px) {
-    @return $px / 67.5 + rem;
+  @return $px / 67.5 + rem;
 }
-@import './other/css/Bargainingcontent.scss';
-@import './other/css/footer.scss';
-@import './other/css/bgcolor.scss';
-@import './other/css/input.scss';
-@import './other/css/moodscontnet.scss';
-@import './other/css/nav.scss';
-@import './other/css/siftcontent.scss';
-@import './other/css/slideshow.scss';
-@import './other/css/sort.scss';
-@import './other/css/cartcontent.scss';
-@import './other/css/cartrecommend.scss';
-@import './other/css/mineheader.scss';
-@import './other/css/minenotice.scss';
-@import './other/css/mineorder.scss';
-@import './other/css/minedetails.scss';
-@import './other/css/groupBookingcontent.scss';
-@import './other/css/groupBookingcontainer.scss';
-@import './other/css/groupFooter.scss';
-@import './other/css/storeUpHeader.scss';
-@import './other/css/storeUpcontent.scss';
-@import './other/css/sortList.scss';
-@import './other/css/Giftcertificate.scss';
-@import './other/css/cutprice.scss';
-@import './other/css/strictselection.scss';
-@import './other/css/cutdetailsheader.scss';
-@import './other/css/cutDetailscontent.scss';
-@import './other/css/cutDetailsfooter.scss';
-@import './other/css/ColumnDetailscontent.scss';
-@import './other/css/MyOrder.scss';
-@import './other/css/MyAddress.scss';
-@import './other/css/MyAddressFooter.scss';
-@import './other/css/MyAddressValue.scss';
-@import './other/css/groupShow.scss';
-@import './other/css/payorder.scss';
-@import './other/css/payList.scss';
-@import './other/css/payFooter.scss';
-@import './other/css/paypricedeatils.scss';
-@import './other/css/payPriceFooter.scss';
-@import './other/css/register.scss';
-@import './other/css/MYOrderWaitPrice.scss';
-@import './other/css/MyOrderDropShipping.scss';
-@import './other/css/MyOrderDropcollect.scss';
-@import './other/css/MyOrderDropAppraise.scss';
-@import './other/css/MyOrderOffTheStocks.scss';
-@import './other/css/cupLump.scss';
-div,body,html,h1,h2,h3,h4,h5,p,ul,ol,span,img{
-    margin:0;
-    padding:0;
-    font-weight: none;
-    box-sizing: border-box;
-    list-style: none;
+@import "./other/css/Bargainingcontent.scss";
+@import "./other/css/footer.scss";
+@import "./other/css/bgcolor.scss";
+@import "./other/css/input.scss";
+@import "./other/css/moodscontnet.scss";
+@import "./other/css/nav.scss";
+@import "./other/css/siftcontent.scss";
+@import "./other/css/slideshow.scss";
+@import "./other/css/sort.scss";
+@import "./other/css/cartcontent.scss";
+@import "./other/css/cartrecommend.scss";
+@import "./other/css/mineheader.scss";
+@import "./other/css/minenotice.scss";
+@import "./other/css/mineorder.scss";
+@import "./other/css/minedetails.scss";
+@import "./other/css/groupBookingcontent.scss";
+@import "./other/css/groupBookingcontainer.scss";
+@import "./other/css/groupFooter.scss";
+@import "./other/css/storeUpHeader.scss";
+@import "./other/css/storeUpcontent.scss";
+@import "./other/css/sortList.scss";
+@import "./other/css/Giftcertificate.scss";
+@import "./other/css/cutprice.scss";
+@import "./other/css/strictselection.scss";
+@import "./other/css/cutdetailsheader.scss";
+@import "./other/css/cutDetailscontent.scss";
+@import "./other/css/cutDetailsfooter.scss";
+@import "./other/css/ColumnDetailscontent.scss";
+@import "./other/css/MyOrder.scss";
+@import "./other/css/MyAddress.scss";
+@import "./other/css/MyAddressFooter.scss";
+@import "./other/css/MyAddressValue.scss";
+@import "./other/css/groupShow.scss";
+@import "./other/css/payorder.scss";
+@import "./other/css/payList.scss";
+@import "./other/css/payFooter.scss";
+@import "./other/css/paypricedeatils.scss";
+@import "./other/css/payPriceFooter.scss";
+@import "./other/css/register.scss";
+@import "./other/css/MYOrderWaitPrice.scss";
+@import "./other/css/MyOrderDropShipping.scss";
+@import "./other/css/MyOrderDropcollect.scss";
+@import "./other/css/MyOrderDropAppraise.scss";
+@import "./other/css/MyOrderOffTheStocks.scss";
+@import "./other/css/cupLump.scss";
+@import "./other/css/My-gift.scss";
+div,
+body,
+html,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+ul,
+ol,
+span,
+img {
+  margin: 0;
+  padding: 0;
+  font-weight: none;
+  box-sizing: border-box;
+  list-style: none;
 }
-a{
-    text-decoration:none;
+a {
+  text-decoration: none;
 }
-img{
-    display: block
+img {
+  display: block;
 }
-body,html{
-    width:100%;
-    height:100%;
-    #app{
-        height:100%;
-        flex: 1;
-        overflow:auto;
-    }
+body,
+html {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  #app {
+    height: 100%;
+    flex: 1;
+    overflow: auto;
+  }
 }
-

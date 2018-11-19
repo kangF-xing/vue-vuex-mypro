@@ -34,78 +34,78 @@
 </template>
 
 <script>
-import '../../../assets/other/css/MyAddressValue.scss'
-import {Button} from 'element-ui'
+import "../../../assets/other/css/MyAddressValue.scss";
+import { Button } from "element-ui";
 export default {
-    data(){
-        return{
-            linkMan:"",
-            mobile:"",
-            code:"",
-            address:"",
-            list:[],
-            buer:false,
-            id:"",
-        }
+  data() {
+    return {
+      linkMan: "",
+      mobile: "",
+      code: "",
+      address: "",
+      list: [],
+      buer: false,
+      id: ""
+    };
+  },
+  mounted() {
+    this.list = this.$route.query.val;
+    if (this.list == "" || this.list == undefined) {
+      this.buer = false;
+      this.linkMan !== undefined;
+      this.mobile !== undefined;
+      this.code !== undefined;
+      this.address !== undefined;
+      this.id !== undefined;
+    } else {
+      this.buer = true;
+      this.linkMan = this.list.linkMan;
+      this.mobile = this.list.mobile;
+      this.code = this.list.code;
+      this.address = this.list.address;
+      this.id = this.list.id;
+    }
+  },
+  methods: {
+    Address() {
+      if (this.id == "" || this.id == undefined) {
+        let params = new URLSearchParams();
+        params.append("address", this.address);
+        params.append("cityId", "750001");
+        params.append("code", this.code);
+        params.append("mobile", this.mobile);
+        params.append("linkMan", this.linkMan);
+        params.append("provinceId", "750001");
+        params.append("token", localStorage.token);
+        this.axios
+          .post("api/user/shipping-address/add", params)
+          .then(res => {});
+      } else {
+        let params = new URLSearchParams();
+        params.append("address", this.address);
+        params.append("cityId", "750001");
+        params.append("code", this.code);
+        params.append("mobile", this.mobile);
+        params.append("linkMan", this.linkMan);
+        params.append("provinceId", "750001");
+        params.append("id", this.id);
+        params.append("token", localStorage.token);
+        this.axios
+          .post("api/user/shipping-address/update", params)
+          .then(res => {});
+      }
     },
-    mounted() {  
-        this.list=this.$route.query.val
-        if(this.list==''||this.list==undefined){
-            this.buer=false
-            this.linkMan!==undefined
-            this.mobile!==undefined
-            this.code!==undefined
-            this.address!==undefined
-            this.id!==undefined
-        }else{
-            this.buer=true
-            this.linkMan=this.list.linkMan
-            this.mobile=this.list.mobile
-            this.code=this.list.code
-            this.address=this.list.address
-            this.id=this.list.id
-        }
-    },
-    methods:{
-        Address(){
-            if(this.id==''||this.id==undefined){
-                let params = new URLSearchParams();
-                params.append('address', this.address);
-                params.append('cityId', '750001');
-                params.append('code', this.code);
-                params.append('mobile', this.mobile);
-                params.append('linkMan', this.linkMan);
-                params.append('provinceId', '750001');
-                params.append('token', localStorage.token);
-                this.axios.post("api/user/shipping-address/add",params).then(res=>{
-                })
-            }else{
-                let params = new URLSearchParams();
-                params.append('address', this.address);
-                params.append('cityId', '750001');
-                params.append('code', this.code);
-                params.append('mobile', this.mobile);
-                params.append('linkMan', this.linkMan);
-                params.append('provinceId', '750001');
-                params.append('id', this.id);
-                params.append('token', localStorage.token);
-                this.axios.post('api/user/shipping-address/update',params).then(res=>{
-                })
-            }
-        },
-        removeAdd(){
-            let params = new URLSearchParams();
-            params.append('id', this.id);
-            params.append('token', localStorage.token);
-            this.axios.post("api/user/shipping-address/delete",params).then(res=>{
-                
-            })
-        }
-    },
-    
-}
+    removeAdd() {
+      let params = new URLSearchParams();
+      params.append("id", this.id);
+      params.append("token", localStorage.token);
+      this.axios
+        .post(global.globalData.api + "user/shipping-address/delete", params)
+        .then(res => {});
+    }
+  }
+};
 </script>
 
 <style>
-
 </style>

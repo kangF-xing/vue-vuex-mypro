@@ -1,56 +1,56 @@
-#Hitscontent{
-    padding: 0 0 0 0;
-    h2{
-        text-align: center;
-        margin:rem(39.998) 0 rem(49.96875) 0;
-        font-size:rem(45);
-        color:#333;
-        small{
-            text-align: center;
-            font-size:rem(42.1875);
-            display: inline-block;
-            border-radius:50%;
-            line-height:rem(43.734375);
-            width:rem(46.875);
-            color: #7f7f7f;
-            height:rem(46.875);
-            border:1px solid #7f7f7f;
-        }
+#Hitscontent {
+  padding: 0 0 0 0;
+  h2 {
+    text-align: center;
+    margin: rem(39.998) 0 rem(49.96875) 0;
+    font-size: rem(45);
+    color: #333;
+    small {
+      text-align: center;
+      font-size: rem(42.1875);
+      display: inline-block;
+      border-radius: 50%;
+      line-height: rem(43.734375);
+      width: rem(46.875);
+      color: #7f7f7f;
+      height: rem(46.875);
+      border: 1px solid #7f7f7f;
     }
-    #Hitscontent-ul{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        padding:0 rem(34.9996875);
-        li{
-            width:47.4%;
-            img{
-                width:100%;
-            }
-            h3{
-                font-size:rem(39);
-                font-weight:100;
-                padding:rem(10) 0;
-                overflow:hidden;
-                word-break:keep-all;
-                white-space:nowrap;
-                text-overflow:ellipsis;
-            }
-            h4{
-                font-size:rem(25.996875);
-                height:rem(40.996875);
-                padding:rem(0) 0 rem(10) 0;
-                font-weight:100;
-                overflow:hidden;
-                word-break:keep-all;
-                white-space:nowrap;
-                text-overflow:ellipsis;
-            }
-            p{
-                font-size:rem(33.99984375);
-                color: #ab2b2b;
-                padding:rem(10);
-            }
-        }
+  }
+  #Hitscontent-ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 rem(34.9996875);
+    li {
+      width: 47.4%;
+      img {
+        width: 100%;
+      }
+      h3 {
+        font-size: rem(39);
+        font-weight: 100;
+        padding: rem(10) 0;
+        overflow: hidden;
+        word-break: keep-all;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+      h4 {
+        font-size: rem(25.996875);
+        height: rem(40.996875);
+        padding: rem(0) 0 rem(10) 0;
+        font-weight: 100;
+        overflow: hidden;
+        word-break: keep-all;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+      p {
+        font-size: rem(33.99984375);
+        color: #ab2b2b;
+        padding: rem(10);
+      }
     }
+  }
 }

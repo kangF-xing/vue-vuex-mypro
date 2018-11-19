@@ -29,133 +29,168 @@ import MyOrderdropShipping from "../components/order/mine/MyOrderdropShipping.vu
 import MyOrderWaitPrice from "../components/order/mine/MyOrderWaitPrice.vue";
 import MyOrderOffTheStocks from "../components/order/mine/MyOrderOffTheStocks.vue";
 import cupLump from "../components/order/cutPrice/cupLump.vue";
+import Mygift from "../components/order/mine/MyGift.vue";
 Vue.use(Router);
 
 export default new Router({
-  mode: "history",
+  // mode: "history",
   routes: [
     {
       path: "/",
+      name: "index",
       component: index,
       children: []
     },
     {
       path: "/sort",
+      name: "Sort",
       component: Sort
     },
     {
       path: "/cart",
+      name: "Cart",
       component: Cart
     },
     {
       path: "/mine",
+      name: "Mine",
       component: Mine
     },
     {
       path: "/group/:id?",
+      name: "Group",
       component: Group,
       children: [
         {
           path: "/",
+          name: "groupChildXQ",
           component: groupChildXQ
         },
         {
           path: "/groupChildPJ/:id?",
+          name: "groupChildPJ",
           component: groupChildPJ
         },
         {
           path: "/GroupShow/:id?",
+          name: "GroupShow",
           component: GroupShow
         }
       ]
     },
     {
       path: "/storeup",
+      name: "StoreUp",
       component: StoreUp
     },
     {
       path: "/sortlist",
+      name: "SortList",
       component: SortList
     },
     {
       path: "/giftcertificate",
+      name: "Giftcertificate",
       component: Giftcertificate
     },
     {
       path: "/cutprice",
+      name: "cutPrice",
       component: cutPrice
     },
     {
       path: "/strictselection",
+      name: "strictSelection",
       component: strictSelection
     },
     {
       path: "/cutdetails/:id?",
+      name: "cutDetails",
       component: cutDetails,
       children: [
         {
           path: "/",
+          name: "cutdetailsChildXQ",
           component: cutdetailsChildXQ
         },
         {
           path: "/cutdetailsChildPJ/:id?",
+          name: "cutdetailsChildPJ",
           component: cutdetailsChildPJ
         }
       ]
     },
     {
       path: "/columndetails",
+      name: "ColumnDetails",
       component: ColumnDetails
     },
     {
       path: "/myorder",
+      name: "MyOrder",
       component: MyOrder,
       children: [
         {
           path: "/",
+          name: "MyOrderWaitPrice",
           component: MyOrderWaitPrice
         },
         {
           path: "/MyOrderdropShipping",
+          name: "MyOrderdropShipping",
           component: MyOrderdropShipping
         },
         {
           path: "/MyOrderDropCollect",
+          name: "MyOrderDropCollect",
           component: MyOrderDropCollect
         },
         {
           path: "/MyOrderDropAppraise",
+          name: "MyOrderDropAppraise",
           component: MyOrderDropAppraise
         },
         {
           path: "/MyOrderOffTheStocks",
+          name: "MyOrderOffTheStocks",
           component: MyOrderOffTheStocks
         }
       ]
     },
     {
       path: "/myaddress",
+      name: "MyAddress",
       component: MyAddress
     },
     {
       path: "/myaddressvalue",
+      name: "MyAddressValue",
       component: MyAddressValue
     },
     {
       path: "/payorder",
+      name: "payOrder",
       component: payOrder
     },
     {
       path: "/payprice",
+      name: "payPrice",
       component: payPrice
     },
     {
       path: "/register/:id?",
+      name: "Register",
       component: Register
     },
     {
-      path: "/cupLump/",
+      path: "/cupLump/:id?",
+      name: "cupLump",
       component: cupLump
+    },
+    {
+      path: "/mygift/:id?",
+      name: "Mygift",
+      component: Mygift
     }
   ]
 });
